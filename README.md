@@ -130,9 +130,13 @@ npm start
 # Open http://localhost:3000 in your browser
 
 
+## 🧪 Running Tests
+npx hardhat test
+
+
 ## 📂 Project Structure
 
-styles
+```plaintext
 Diption/
 │
 ├── contracts/            # 📜 Solidity smart contracts
@@ -154,8 +158,6 @@ Diption/
 
 
 
-## 🧪 Running Tests
-npx hardhat test
 
 
 ## ☎️ Contact Me
