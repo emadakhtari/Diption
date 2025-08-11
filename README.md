@@ -133,7 +133,6 @@ npm start
 ## 🧪 Running Tests
 npx hardhat test
 
-
 ## 📂 Project Structure
 
     nft-marketplace-example/
@@ -149,7 +148,6 @@ npx hardhat test
     ├── .env.example         # 🔐 Environment variable example
     ├── hardhat.config.js    # 🛠 Hardhat configuration
     └── package.json         # 📦 Project metadata & dependencies
-
 
 
 
