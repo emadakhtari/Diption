@@ -131,7 +131,7 @@ npm start
 
 ## 📂 Project Structure
 
-Diption/
+nft-marketplace-example/
 │
 ├── contracts/          # Solidity smart contracts
 ├── scripts/            # Deployment scripts
@@ -143,6 +143,7 @@ Diption/
 ├── .env.example        # Environment variable example
 ├── hardhat.config.js   # Hardhat configuration
 └── package.json
+
 
 ## 🧪 Running Tests
 npx hardhat test
