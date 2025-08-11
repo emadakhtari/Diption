@@ -1,0 +1,86 @@
+{
+  "contractName": "Collection",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "imageUrl",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        }
+      ],
+      "name": "CollectionCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_imageUrl",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_category",
+          "type": "string"
+        }
+      ],
+      "name": "createCollection",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllTokens",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x...",
+  "deployedBytecode": "0x...",
+  "sourceMap": "...",
+  "deployedSourceMap": "...",
+  "source": "pragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\n\ncontract Collection is ERC721 {\n    mapping(uint256 => string) public categoryOfToken;\n    uint256 private nextTokenId;\n\n    struct CollectionData {\n        string name;\n        string imageUrl;\n        string category;\n    }\n\n    mapping(uint256 => CollectionData) public collectionData;\n    uint256[] public allTokens; // New array to store all token IDs\n\n    event CollectionCreated(uint256 indexed tokenId, string name, string imageUrl, string category);\n\n    constructor() ERC721(\"NFT Collection\", \"NFTC\") {}\n\n    function createCollection(string memory _name, string memory _imageUrl, string memory _category) external {\n        require(bytes(_name).length > 0, \"Name cannot be empty\");\n        require(bytes(_imageUrl).length > 0, \"Image URL cannot be empty\");\n        require(\n            compareStrings(_category, \"Modern\") ||\n            compareStrings(_category, \"Impressionism\") ||\n            compareStrings(_category, \"Surrealism\") ||\n            compareStrings(_category, \"Photography\") ||\n            compareStrings(_category, \"Digital Art\") ||\n            compareStrings(_category, \"Calligraphy\"),\n            \"Invalid category\"\n        );\n\n        uint256 tokenId = nextTokenId;\n        _mint(msg.sender, tokenId);\n        collectionData[tokenId] = CollectionData(_name, _imageUrl, _category);\n        allTokens.push(tokenId); // Add token ID to the array\n        emit CollectionCreated(tokenId, _name, _imageUrl, _category);\n\n        nextTokenId++;\n    }\n\n    // Function to compare strings\n    function compareStrings(string memory a, string memory b) private pure returns (bool) {\n        return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))));\n    }\n\n    // Function to get all token IDs\n    function getAllTokens() external view returns (uint256[] memory) {\n        return allTokens;\n    }\n}\n",
+  "sourcePath": "../../contracts/Collection.sol",
+  "ast": {
+    
+  }
+}

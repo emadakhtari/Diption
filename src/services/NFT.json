@@ -1,0 +1,224 @@
+{
+  "contractName": "NFT",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_collection",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_fileUrl",
+          "type": "string"
+        }
+      ],
+      "name": "createNFT",
+      "outputs": [],
+      "stateMutability": "external",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_collection",
+          "type": "string"
+        }
+      ],
+      "name": "getNFTsByCollection",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getNFTsSortedByPrice",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "nftData",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "collection",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "fileUrl",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_collection",
+          "type": "string"
+        }
+      ],
+      "name": "nftsByCollection",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nextTokenId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOwnerByIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x...",
+  "deployedBytecode": "0x...",
+  "sourceMap": "...",
+  "deployedSourceMap": "...",
+  "source": "pragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\n\ncontract NFT is ERC721 {\n    struct NFTData {\n        string name;\n        uint256 price;\n        string description;\n        string collection;\n        string fileUrl; \n    }\n\n    mapping(uint256 => NFTData) public nftData;\n    uint256 public nextTokenId;\n\n    mapping(string => uint256[]) private nftsByCollection;\n\n    event NFTCreated(uint256 indexed tokenId, string collection, string fileUrl);\n\n    constructor() ERC721(\"NFT\", \"NFT\") {}\n\n    function createNFT(\n        string memory _name,\n        uint256 _price,\n        string memory _description,\n        string memory _collection,\n        string memory _fileUrl\n    ) external {\n        require(bytes(_name).length > 0, \"Name cannot be empty\");\n        require(_price > 0, \"Price must be greater than zero\");\n        require(bytes(_description).length > 0, \"Description cannot be empty\");\n        require(bytes(_fileUrl).length > 0, \"File URL cannot be empty\");\n\n        uint256 tokenId = nextTokenId++;\n        _mint(msg.sender, tokenId);\n        nftData[tokenId] = NFTData(_name, _price, _description, _collection, _fileUrl);\n        nftsByCollection[_collection].push(tokenId);\n\n        emit NFTCreated(tokenId, _collection, _fileUrl);\n    }\n\n    function getNFTsByCollection(string memory _collection) external view returns (uint256[] memory) {\n        return nftsByCollection[_collection];\n    }\n\n    function getNFTsSortedByPrice() external view returns (uint256[] memory) {\n        // Implement sorting by price\n    }\n}\n",
+  "sourcePath": "../../contracts/NFT.sol",
+  "ast": {
+   
+  }
+}
