@@ -136,25 +136,20 @@ npx hardhat test
 
 ## 📂 Project Structure
 
-```plaintext
-Diption/
-│
-├── contracts/            # 📜 Solidity smart contracts
-├── scripts/              # ⚙ Deployment scripts
-├── src/                  # 💻 ReactJS frontend source
-│   ├── assets/           # 🗄 Files & Images
-│   ├── components/       # 🧩 Reusable UI components
-│     ├── elements/       # 🔁 Repeating elements
-│     ├── pages/          # 📄 App pages
-│     ├── styles/         # 🏗 App styles
-│   ├── services/         # 🔧 Web3 helpers & Services & Config
-│   └── App.js            # 🚀 Main React component
-│   └── index.js          # 🗂 Main React Index
-│   └── theme.js          # 🌈 Main React Index
-│
-├── .env.example          # 🔐 Environment variable example
-├── hardhat.config.js     # 🛠 Hardhat configuration
-└── package.json          # 📦 Project metadata & dependencies
+    nft-marketplace-example/
+    │
+    ├── contracts/           # 📜 Solidity smart contracts
+    ├── scripts/             # ⚙ Deployment scripts
+    ├── src/                 # 💻 ReactJS frontend source
+    │   ├── components/      # 🧩 Reusable UI components
+    │   ├── pages/           # 📄 App pages
+    │   ├── utils/           # 🔧 Web3 helpers & API calls
+    │   └── App.js           # 🚀 Main React component
+    │
+    ├── .env.example         # 🔐 Environment variable example
+    ├── hardhat.config.js    # 🛠 Hardhat configuration
+    └── package.json         # 📦 Project metadata & dependencies
+
 
 
 
