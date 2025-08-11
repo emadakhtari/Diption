@@ -136,13 +136,10 @@ Diption/
 ├── contracts/          # Solidity smart contracts
 ├── scripts/            # Deployment scripts
 ├── src/                # ReactJS frontend source
-│   ├── assets/         # Images & Files
 │   ├── components/     # Reusable UI components
-│   ├── services/       # Web3 helpers & API calls
 │   ├── pages/          # App pages
+│   ├── utils/          # Web3 helpers & API calls
 │   └── App.js
-│   └── index.js
-│   └── theme.js
 ├── .env.example        # Environment variable example
 ├── hardhat.config.js   # Hardhat configuration
 └── package.json
