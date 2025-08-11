@@ -13,8 +13,8 @@
 
 <!-- PROJECT LOGO -->
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Logo_ethereum.png" alt="Logo" width="80">
-  <h1 align="center">NFT Marketplace – Example Project</h1>
+  <img src="https://github.com/emadakhtari/Diption/blob/main/src/assets/images/logo512.png" alt="Logo" width="80">
+  <h1 align="center">Diption NFT Marketplace – Example Project</h1>
   <p align="center">
     A minimal NFT marketplace for demonstration purposes – mint, buy, and manage NFTs on Ethereum with PINATA IPFS and MetaMask wallet integration.
     <br />
