@@ -1,5 +1,5 @@
 <!-- PROJECT SHIELDS -->
-```plaintext
+
 <p align="center">
   <a href="https://github.com/emadakhtari/Diption">
     <img src="https://img.shields.io/github/license/emadakhtari/Diption?style=for-the-badge" alt="License">
