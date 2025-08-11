@@ -1,4 +1,5 @@
 <!-- PROJECT SHIELDS -->
+```plaintext
 <p align="center">
   <a href="https://github.com/emadakhtari/Diption">
     <img src="https://img.shields.io/github/license/emadakhtari/Diption?style=for-the-badge" alt="License">
@@ -131,16 +132,21 @@ npm start
 
 ## 📂 Project Structure
 
-```plaintext
-nft-marketplace-example/
+styles
+Diption/
 │
-├── contracts/           # 📜 Solidity smart contracts
-├── scripts/             # ⚙ Deployment scripts
+├── contracts/            # 📜 Solidity smart contracts
+├── scripts/              # ⚙ Deployment scripts
 ├── src/                  # 💻 ReactJS frontend source
+│   ├── assets/           # 🗄 Files & Images
 │   ├── components/       # 🧩 Reusable UI components
-│   ├── pages/            # 📄 App pages
-│   ├── utils/            # 🔧 Web3 helpers & API calls
+│     ├── elements/       # 🔁 Repeating elements
+│     ├── pages/          # 📄 App pages
+│     ├── styles/         # 🏗 App styles
+│   ├── services/         # 🔧 Web3 helpers & Services & Config
 │   └── App.js            # 🚀 Main React component
+│   └── index.js          # 🗂 Main React Index
+│   └── theme.js          # 🌈 Main React Index
 │
 ├── .env.example          # 🔐 Environment variable example
 ├── hardhat.config.js     # 🛠 Hardhat configuration
