@@ -1,4 +1,4 @@
-<!-- PROJECT SHIELDS -->
+<img width="468" height="25" alt="image" src="https://github.com/user-attachments/assets/51b27251-3716-4594-9955-fd2ec10f6e2b" /><!-- PROJECT SHIELDS -->
 
 <p align="center">
   <a href="https://github.com/emadakhtari/Diption">
@@ -133,27 +133,25 @@ npm start
 ## 🧪 Running Tests
 npx hardhat test
 
+assets
 
 ## 📂 Project Structure
 
-Diption/
-│
-├── contracts/            # 📜 Solidity smart contracts
-├── scripts/              # ⚙ Deployment scripts
-├── src/                  # 💻 ReactJS frontend source
-│   ├── assets/           # 🗄 Files & Images
-│   ├── components/       # 🧩 Reusable UI components
-│       ├── elements/     # 🔁 Repeating elements
-│       ├── pages/        # 📄 App pages
-│       ├── styles/       # 🏗 App styles
-│   ├── services/         # 🔧 Web3 helpers, Services & Config
-│   ├── App.js            # 🚀 Main React component
-│   ├── index.js          # 🗂 Main React entry point
-│   └── theme.js          # 🌈 App theme configuration
-│
-├── .env.example          # 🔐 Environment variable example
-├── hardhat.config.js     # 🛠 Hardhat configuration
-└── package.json          # 📦 Project metadata & dependencies
+    Diption/
+    │
+    ├── contracts/           # 📜 Solidity smart contracts
+    ├── scripts/             # ⚙ Deployment scripts
+    ├── src/                 # 💻 ReactJS frontend source
+    │   ├── assets/      # 🧩 Reusable UI components
+    │   ├── components/      # 🧩 Reusable UI components
+    │   ├── pages/           # 📄 App pages
+    │   ├── utils/           # 🔧 Web3 helpers & API calls
+    │   └── App.js           # 🚀 Main React component
+    │
+    ├── .env.example         # 🔐 Environment variable example
+    ├── hardhat.config.js    # 🛠 Hardhat configuration
+    └── package.json         # 📦 Project metadata & dependencies
+
 
 
 
