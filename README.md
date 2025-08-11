@@ -131,18 +131,21 @@ npm start
 
 ## 📂 Project Structure
 
+```plaintext
 nft-marketplace-example/
 │
-├── contracts/          # Solidity smart contracts
-├── scripts/            # Deployment scripts
-├── src/                # ReactJS frontend source
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # App pages
-│   ├── utils/          # Web3 helpers & API calls
-│   └── App.js
-├── .env.example        # Environment variable example
-├── hardhat.config.js   # Hardhat configuration
-└── package.json
+├── contracts/           # 📜 Solidity smart contracts
+├── scripts/             # ⚙ Deployment scripts
+├── src/                  # 💻 ReactJS frontend source
+│   ├── components/       # 🧩 Reusable UI components
+│   ├── pages/            # 📄 App pages
+│   ├── utils/            # 🔧 Web3 helpers & API calls
+│   └── App.js            # 🚀 Main React component
+│
+├── .env.example          # 🔐 Environment variable example
+├── hardhat.config.js     # 🛠 Hardhat configuration
+└── package.json          # 📦 Project metadata & dependencies
+
 
 
 ## 🧪 Running Tests
