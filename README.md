@@ -89,7 +89,7 @@ The dApp uses:
 
 ---
 
-## ⚙ Installation (Copy All at Once)
+## ⚙ Installation 
 
 
 # 1️⃣ Prerequisites
