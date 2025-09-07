@@ -33,11 +33,7 @@
      The <a> wraps the image so clicking it opens your Imgur album.
 -->
 <p align="center">
-  <a href="https://imgur.com/iW5AxHp" target="_blank" rel="noopener noreferrer">
-    <img src="DIRECT_IMAGE_URL" alt="Diption – Hero screenshot" width="900">
-  </a>
-  <br />
-  <sup>Click the image to view the full album on Imgur.</sup>
+<a href='https://postimg.cc/9DZDMnJn' target='_blank'><img src='https://i.postimg.cc/9DZDMnJn/diption.jpg' border='0' alt='diption'/></a>
 </p>
 ---
 
