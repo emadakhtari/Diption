@@ -28,7 +28,17 @@
     <a href="#-license">License</a>
   </p>
 </p>
-
+<!-- HERO IMAGE
+     Replace DIRECT_IMAGE_URL with a direct image link (e.g., https://i.imgur.com/XXXXXXX.jpg).
+     The <a> wraps the image so clicking it opens your Imgur album.
+-->
+<p align="center">
+  <a href="https://imgur.com/a/PNIAT2C" target="_blank" rel="noopener noreferrer">
+    <img src="DIRECT_IMAGE_URL" alt="Diption – Hero screenshot" width="900">
+  </a>
+  <br />
+  <sup>Click the image to view the full album on Imgur.</sup>
+</p>
 ---
 
 ## 📌 About the Project
