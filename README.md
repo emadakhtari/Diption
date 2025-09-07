@@ -33,7 +33,7 @@
      The <a> wraps the image so clicking it opens your Imgur album.
 -->
 <p align="center">
-<a href='https://postimg.cc/9DZDMnJn' target='_blank'><img src='https://i.postimg.cc/9DZDMnJn/diption.jpg' border='0' alt='diption'/></a>
+<img src='https://i.postimg.cc/9DZDMnJn/diption.jpg' border='0' width="300" alt='diption'/>
 </p>
 ---
 
