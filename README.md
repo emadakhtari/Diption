@@ -28,6 +28,7 @@
     <a href="#-license">License</a>
   </p>
 </p>
+
 <!-- HERO IMAGE
      Replace DIRECT_IMAGE_URL with a direct image link (e.g., https://i.imgur.com/XXXXXXX.jpg).
      The <a> wraps the image so clicking it opens your Imgur album.
@@ -36,6 +37,9 @@
 <img src='https://i.postimg.cc/Qdn16L5h/diption.jpg' border='0' width="500" alt='diption'/>
 </p>
 ---
+
+## 🔑 Sanctions
+To use the site, you must use a very strong V-P-N, especially for creating NFTs and uploading files, because the **Pinata** service is used. Unfortunately, not every V-P-N can successfully bypass the embargo on this API.
 
 ## 📌 About the Project
 
@@ -101,8 +105,8 @@ The dApp uses:
 
 # 1️⃣ Prerequisites
 # Make sure you have installed:
-# - Node.js v18.20.8
-# - npm v10+
+# - Node.js v16.20.2
+# - npm v8.19.4
 # - MetaMask browser extension
 # - PINATA account for IPFS storage
 # - Ethereum testnet (Sepolia recommended)
